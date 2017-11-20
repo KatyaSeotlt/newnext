@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>
+</head>
+
+<body>
+  <div id="page-registr">
+    <div class='logo-container'>
+      <img class='logo' src='img/logo.png'/>
+    </div>
+    <div class='form-container'>
+      <div class='name-field'>Фамилия</div>
+      <div class='input-field'>
+          <input type="text" id="lastname" placeholder="Введите свою фамилию" class="input-login"/>
+      </div>
+
+      <div class='name-field'>Имя</div>
+      <div class='input-field'>
+          <input type="text" id="name" placeholder="Введите свою фамилию" class="input-login"/>
+      </div>
+      <div class='name-field'>Страна</div>
+      <div class='input-field'>
+          <select type="text" id="country"  class="input-login"/>
+            <option>Австралия</option>
+            <option>Австрия</option>
+            <option>Азербайджан</option>
+            <option>Аландские о-ва</option>
+            <option>Албания</option>
+            <option>Алжир</option>
+            <option>Американское Самоа</option>
+            <option>Ангилья</option>
+            <option>Ангола</option>
+            <option>Андорра</option>
+            <option>Антарктида</option>
+            <option>Антигуа и Барбуда</option>
+            <option>Аргентина</option>
+            <option>Армения</option>
+            <option>Аруба</option>
+            <option>Афганистан</option>
+            <option>Багамские о-ва</option>
+            <option>Бангладеш</option>
+            <option>Барбадос</option>
+            <option>Бахрейн</option>
+            <option>Беларусь</option>
+            <option>Белиз</option>
+            <option>Бельгия</option>
+            <option>Бенин</option>
+            <option>Бермудские о-ва</option>
+            <option>Болгария</option>
+            <option>Боливия</option>
+            <option>Бонэйр, Синт-Эстатиус и Саба</option>
+            <option>Босния и Герцеговина</option>
+            <option>Ботсвана</option>
+            <option>Бразилия</option>
+            <option>Британская территория в Индийском океане</option>
+            <option>Бруней-Даруссалам</option>
+            <option>Буркина-Фасо</option>
+            <option>Бурунди</option>
+            <option>Бутан</option>
+            <option>Вануату</option>
+            <option>Ватикан</option>
+            <option>Великобритания</option>
+            <option>Венгрия</option>
+            <option>Венесуэла</option>
+            <option>Виргинские о-ва (Британские)</option>
+            <option>Виргинские о-ва (США)</option>
+            <option>Внешние малые о-ва (США)</option>
+            <option>Восточный Тимор</option>
+            <option>Вьетнам</option>
+            <option>Габон</option>
+            <option>Гаити</option>
+            <option>Гайана</option>
+            <option>Гамбия</option>
+            <option>Гана</option>
+            <option>Гваделупа</option>
+            <option>Гватемала</option>
+            <option>Гвинея</option>
+            <option>Гвинея-Бисау</option>
+            <option>Германия</option>
+            <option>Гернси</option>
+            <option>Гибралтар</option>
+            <option>Гондурас</option>
+            <option>Гонконг (особый район)</option>
+            <option>Гренада</option>
+            <option>Гренландия</option>
+            <option>Греция</option>
+            <option>Грузия</option>
+            <option>Гуам</option>
+            <option>Дания</option>
+            <option>Джерси</option>
+            <option>Джибути</option>
+            <option>Диего-Гарсия</option>
+            <option>Доминика</option>
+            <option>Доминиканская Республика</option>
+            <option>Египет</option>
+            <option>Замбия</option>
+            <option>Западная Сахара</option>
+            <option>Зимбабве</option>
+            <option>Израиль</option>
+            <option>Индия</option>
+            <option>Индонезия</option>
+            <option>Иордания</option>
+            <option>Ирак</option>
+            <option>Иран</option>
+            <option>Ирландия</option>
+            <option>Исландия</option>
+            <option>Испания</option>
+            <option>Италия</option>
+            <option>Йемен</option>
+            <option>Кабо-Верде</option>
+            <option>Казахстан</option>
+            <option>Каймановы о-ва</option>
+            <option>Камбоджа</option>
+            <option>Камерун</option>
+            <option>Канада</option>
+            <option>Канарские о-ва</option>
+            <option>Катар</option>
+            <option>Кения</option>
+            <option>Кипр</option>
+            <option>Киргизия</option>
+            <option>Кирибати</option>
+            <option>Китай</option>
+            <option>КНДР</option>
+            <option>Кокосовые о-ва</option>
+            <option>Колумбия</option>
+            <option>Коморские о-ва</option>
+            <option>Конго - Браззавиль</option>
+            <option>Конго - Киншаса</option>
+            <option>Косово</option>
+            <option>Коста-Рика</option>
+            <option>Кот-д’Ивуар</option>
+            <option>Куба</option>
+            <option>Кувейт</option>
+            <option>Кюрасао</option>
+            <option>Лаос</option>
+            <option>Латвия</option>
+            <option>Лесото</option>
+            <option>Либерия</option>
+            <option>Ливан</option>
+            <option>Ливия</option>
+            <option>Литва</option>
+            <option>Лихтенштейн</option>
+            <option>Люксембург</option>
+            <option>Маврикий</option>
+            <option>Мавритания</option>
+            <option>Мадагаскар</option>
+            <option>Майотта</option>
+            <option>Макао (особый район)</option>
+            <option>Македония</option>
+            <option>Малави</option>
+            <option>Малайзия</option>
+            <option>Мали</option>
+            <option>Мальдивские о-ва</option>
+            <option>Мальта</option>
+            <option>Марокко</option>
+            <option>Мартиника</option>
+            <option>Маршалловы о-ва</option>
+            <option>Мексика</option>
+            <option>Мозамбик</option>
+            <option>Молдова</option>
+            <option>Монако</option>
+            <option>Монголия</option>
+            <option>Монтсеррат</option>
+            <option>Мьянма (Бирма)</option>
+            <option>Намибия</option>
+            <option>Науру</option>
+            <option>Непал</option>
+            <option>Нигер</option>
+            <option>Нигерия</option>
+            <option>Нидерланды</option>
+            <option>Никарагуа</option>
+            <option>Ниуэ</option>
+            <option>Новая Зеландия</option>
+            <option>Новая Каледония</option>
+            <option>Норвегия</option>
+            <option>о-в Вознесения</option>
+            <option>О-в Мэн</option>
+            <option>о-в Норфолк</option>
+            <option>о-в Рождества</option>
+            <option>О-в Св. Елены</option>
+            <option>о-ва Кука</option>
+            <option>О-ва Тёркс и Кайкос</option>
+            <option>ОАЭ</option>
+            <option>Оман</option>
+            <option>Пакистан</option>
+            <option>Палау</option>
+            <option>Палестинские территории</option>
+            <option>Панама</option>
+            <option>Папуа – Новая Гвинея</option>
+            <option>Парагвай</option>
+            <option>Перу</option>
+            <option>Питкэрн</option>
+            <option>Польша</option>
+            <option>Португалия</option>
+            <option>Пуэрто-Рико</option>
+            <option>Республика Корея</option>
+            <option>Реюньон</option>
+            <option selected="selected">Россия</option>
+            <option>Руанда</option>
+            <option>Румыния</option>
+            <option>Сальвадор</option>
+            <option>Самоа</option>
+            <option>Сан-Марино</option>
+            <option>Сан-Томе и Принсипи</option>
+            <option>Саудовская Аравия</option>
+            <option>Свазиленд</option>
+            <option>Северные Марианские о-ва</option>
+            <option>Сейшельские о-ва</option>
+            <option>Сен-Бартельми</option>
+            <option>Сен-Мартен</option>
+            <option>Сен-Пьер и Микелон</option>
+            <option>Сенегал</option>
+            <option>Сент-Винсент и Гренадины</option>
+            <option>Сент-Китс и Невис</option>
+            <option>Сент-Люсия</option>
+            <option>Сербия</option>
+            <option>Сеута и Мелилья</option>
+            <option>Сингапур</option>
+            <option>Синт-Мартен</option>
+            <option>Сирия</option>
+            <option>Словакия</option>
+            <option>Словения</option>
+            <option>Соединенные Штаты</option>
+            <option>Соломоновы о-ва</option>
+            <option>Сомали</option>
+            <option>Судан</option>
+            <option>Суринам</option>
+            <option>Сьерра-Леоне</option>
+            <option>Таджикистан</option>
+            <option>Таиланд</option>
+            <option>Тайвань</option>
+            <option>Танзания</option>
+            <option>Того</option>
+            <option>Токелау</option>
+            <option>Тонга</option>
+            <option>Тринидад и Тобаго</option>
+            <option>Тристан-да-Кунья</option>
+            <option>Тувалу</option>
+            <option>Тунис</option>
+            <option>Туркменистан</option>
+            <option>Турция</option>
+            <option>Уганда</option>
+            <option>Узбекистан</option>
+            <option>Украина</option>
+            <option>Уоллис и Футуна</option>
+            <option>Уругвай</option>
+            <option>Фарерские о-ва</option>
+            <option>Федеративные Штаты Микронезии</option>
+            <option>Фиджи</option>
+            <option>Филиппины</option>
+            <option>Финляндия</option>
+            <option>Фолклендские о-ва</option>
+            <option>Франция</option>
+            <option>Французская Гвиана</option>
+            <option>Французская Полинезия</option>
+            <option>Французские Южные Территории</option>
+            <option>Хорватия</option>
+            <option>ЦАР</option>
+            <option>Чад</option>
+            <option>Черногория</option>
+            <option>Чехия</option>
+            <option>Чили</option>
+            <option>Швейцария</option>
+            <option>Швеция</option>
+            <option>Шпицберген и Ян-Майен</option>
+            <option>Шри-Ланка</option>
+            <option>Эквадор</option>
+            <option>Экваториальная Гвинея</option>
+            <option>Эритрея</option>
+            <option>Эстония</option>
+            <option>Эфиопия</option>
+            <option>ЮАР</option>
+            <option>Южная Георгия и Южные Сандвичевы о-ва</option>
+            <option>Южный Судан</option>
+            <option>Ямайка</option>
+            <option>Япония</option>
+          </select>
+      </div>
+      <div class='name-field'>Город</div>
+      <div class='input-field'>
+          <input type="text" id="city" placeholder="Укажите город" class="input-login"/>
+      </div>
+
+      <div class='name-field'>E-mail</div>
+      <div class='input-field'>
+          <input type="email" id="city" placeholder="Введите свой e-mail" class="input-login"/>
+      </div>
+
+      <div class='name-field'>Номер телефона</div>
+      <div class='input-field'>
+          <input type="phone" id="phone" placeholder="Введите свой номер телефона" class="input-login"/>
+      </div>
+      <div class='button-container'>
+        <button class='buttons' onclick='app.registrationUser()'>Зарегистрироваться <img src="img/arrow_r.png"/></button>
+      </div>
+    </div>
+ </div>
+ <div id="page-sms-confirm" >
+   <div class='logo-container'>
+     <img class='logo' src='img/logo.png'/>
+   </div>
+   <div class='form-container marginTop-100'>
+           <div class='name-field'>Введите код</div>
+           <div class='input-field '>
+               <input type="text" id="confirmSms" placeholder="код отправлен вам в SMS" class="input-login"/>
+           </div>
+           <div class='button-container'>
+             <button class='buttons' onclick='app.confirmRegistrationUser()'>Подтвердить <img src="img/arrow_r.png"/></button>
+           </div>
+   </div>
+ </div>
+
+ <div id="page-signals" >
+   <div class='logo-container'><img class='logo-name' src='img/logoname.png'/></div>
+   <div class='signal-container'>
+     <div class="signal"></div>
+   </div>
+ </div>
+
+ </div>
+
+
+
+
+    <!--div class="app">
+
+        <h1>PhoneGap</h1>
+        <div id="registration" class="blink">
+            <p class="event waiting">Requesting Registration ID</p>
+            <p class="event received">Registered</p>
+        </div>
+    </div-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
