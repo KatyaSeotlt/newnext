@@ -1,0 +1,197 @@
+{
+  "project_info": {
+    "project_number": "460180288949",
+    "firebase_url": "https://newnext-c5f73.firebaseio.com",
+    "project_id": "newnext-c5f73",
+    "storage_bucket": "newnext-c5f73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460180288949:android:9c59838ba2a2878d",
+        "android_client_info": {
+          "package_name": "com.nn2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460180288949-91tt8k6ido562nqanv448s7h0knol3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkeQnk4QZdWTKS-PTo1FnUtQtQqhh-Yw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460180288949:android:47db952b6207e847",
+        "android_client_info": {
+          "package_name": "com.newnext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460180288949-91tt8k6ido562nqanv448s7h0knol3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkeQnk4QZdWTKS-PTo1FnUtQtQqhh-Yw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460180288949:android:fccddfa97548379b",
+        "android_client_info": {
+          "package_name": "com.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460180288949-91tt8k6ido562nqanv448s7h0knol3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkeQnk4QZdWTKS-PTo1FnUtQtQqhh-Yw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460180288949:android:5920de3503a2d18c",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.fcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460180288949-91tt8k6ido562nqanv448s7h0knol3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkeQnk4QZdWTKS-PTo1FnUtQtQqhh-Yw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460180288949:android:88222024d99f9b48",
+        "android_client_info": {
+          "package_name": "com.newnexttrader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460180288949-91tt8k6ido562nqanv448s7h0knol3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkeQnk4QZdWTKS-PTo1FnUtQtQqhh-Yw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460180288949:android:d2a24154edc8d620",
+        "android_client_info": {
+          "package_name": "com.sgacryptotrading"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460180288949-91tt8k6ido562nqanv448s7h0knol3ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkeQnk4QZdWTKS-PTo1FnUtQtQqhh-Yw8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
