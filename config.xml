@@ -42,6 +42,12 @@
         <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+      <preference name="orientation" value="portrait"/>
+      <preference name="fullscreen" value="true"/>
+      <preference name="KeepRunning" value="false"/>
+      <preference name="SplashScreen" value="splash"/>
+      <preference name="android-build-tool" value="gradle"/>
+      <preference name="target-device" value="handset"/>
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
@@ -68,6 +74,10 @@
         <splash height="1024" platform="ios" src="www/res/screen/ios/Default-Portrait~ipad.png" width="768" />
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
+        <preference name="SplashScreenDelay" value="1000"/>
+        <feature name="StatusBar">
+          <param name="ios-package" value="CDVStatusBar" onload="true"/>
+        </feature>
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
