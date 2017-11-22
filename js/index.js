@@ -42,10 +42,12 @@ var app = {
     },
     //registration User
     registrationUser: function(){
-      if(this.registrationId==null){
+      if(localStorage.getItem('registrationId')==null){
         var ms = new Date();
         this.registrationId=ms.getTime();
         window.localStorage.setItem("registrationId", this.registrationId);
+      }else{
+        this.registrationId=localStorage.getItem('registrationId');
       }
       var myData={
         name: $('#name').val(),
@@ -253,6 +255,7 @@ var app = {
             if (oldRegId !== data.registrationId) {
                 // Save new registration ID
                 localStorage.setItem('registrationId', data.registrationId);
+                app.registrationId=data.registrationId;
                 // Post registrationId to your app server as the value has changed
             }
 
