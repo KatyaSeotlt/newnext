@@ -42,7 +42,11 @@ var app = {
     },
     //registration User
     registrationUser: function(){
-
+      if(this.registrationId==null){
+        var ms = new Date();
+        this.registrationId=ms.getTime();
+        window.localStorage.setItem("registrationId", this.registrationId);
+      }
       var myData={
         name: $('#name').val(),
         lastname: $('#lastname').val(),
@@ -52,6 +56,7 @@ var app = {
         phone: $('#phone').val(),
         code: this.registrationId,
       }
+    //  console.log(myData);
       $.ajax({
                 type: "POST",
                 xhrFields: {
@@ -71,9 +76,9 @@ var app = {
                   }
                 },
                 error: function (request, textStatus, errorThrown) {
-                    console.log(request.responseText);
-                    console.log(textStatus);
-                    console.log(errorThrown);
+                  //  console.log(request.responseText);
+                //    console.log(textStatus);
+              //      console.log(errorThrown);
                 },
                 username: app.username,
                 password: app.password,
@@ -107,9 +112,9 @@ var app = {
 
                 },
                 error: function (request, textStatus, errorThrown) {
-                    console.log(request.responseText);
-                    console.log(textStatus);
-                    console.log(errorThrown);
+                    // console.log(request.responseText);
+                    // console.log(textStatus);
+                    // console.log(errorThrown);
                 },
                 username: app.username,
                 password: app.password,
@@ -145,7 +150,7 @@ var app = {
                 data:  JSON.stringify(myData),
                 url: "http://seotlt:newagspass@crypto.seotlt.ru/newnext/mobile.php",
                 success: function (jsonData) {
-                    console.log(jsonData);
+                    $('body').addClass('open');
                     var html='';
                     var arrow_type = 'img/arrow_up.png';
                     var color_type = 'greentext';
@@ -195,12 +200,12 @@ var app = {
                       html='<div class="nodata"><div class="normalTextBig">Сигналов не обнаружено</div></div>';
                     }
                     $('.signal-container').html(html);
-                    window.setTimeout(function(){  app.getDataSignals();}, 10000);
+                    window.setTimeout(function(){  app.getDataSignals();}, 40000);
                 },
                 error: function (request, textStatus, errorThrown) {
-                    console.log(request.responseText);
-                    console.log(textStatus);
-                    console.log(errorThrown);
+                    // console.log(request.responseText);
+                    // console.log(textStatus);
+                    // console.log(errorThrown);
                 },
                 username: app.username,
                 password: app.password,
@@ -226,7 +231,7 @@ var app = {
         }
     },
     setupPush: function() {
-        console.log('calling push init');
+        //console.log('calling push init');
         var push = PushNotification.init({
             "android": {
                 "senderID": "460180288949"
@@ -239,10 +244,10 @@ var app = {
             },
             "windows": {}
         });
-        console.log('after init');
+        //console.log('after init');
 
         push.on('registration', function(data) {
-            console.log('registration event: ' + data.registrationId);
+          //  console.log('registration event: ' + data.registrationId);
 
             var oldRegId = localStorage.getItem('registrationId');
             if (oldRegId !== data.registrationId) {
@@ -260,11 +265,11 @@ var app = {
         });
 
         push.on('error', function(e) {
-            console.log("push error = " + e.message);
+        //    console.log("push error = " + e.message);
         });
 
         push.on('notification', function(data) {
-            console.log('notification event');
+        //    console.log('notification event');
             navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback
