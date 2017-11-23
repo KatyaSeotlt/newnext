@@ -255,16 +255,29 @@ var app = {
             if (oldRegId !== data.registrationId) {
                 // Save new registration ID
                 localStorage.setItem('registrationId', data.registrationId);
+
                 app.registrationId=data.registrationId;
-                // Post registrationId to your app server as the value has changed
+
+                var myData={
+                  oldApikey: oldRegId,
+                  newApikey: data.registrationId,
+                };
+                $.ajax({
+                          type: "POST",
+                          xhrFields: {
+                              withCredentials: true
+                          },
+                          dataType: "json",
+                          contentType: "application/javascript",
+                          data: JSON.stringify(myData),
+                          url: "http://seotlt:newagspass@crypto.seotlt.ru/newnext/mobile.php",
+                          success: function (jsonData) {},
+                          error: function (request, textStatus, errorThrown) {},
+                          username: app.username,
+                          password: app.password,
+                      });
             }
 
-            // var parentElement = document.getElementById('registration');
-            // var listeningElement = parentElement.querySelector('.waiting');
-            // var receivedElement = parentElement.querySelector('.received');
-            //
-            // listeningElement.setAttribute('style', 'display:none;');
-            // receivedElement.setAttribute('style', 'display:block;');
         });
 
         push.on('error', function(e) {
