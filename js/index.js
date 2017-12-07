@@ -28,7 +28,8 @@ var app = {
     },
     isAuth: function() {
   //    console.log(window.localStorage.getItem("access"));
-      return !(window.localStorage.getItem("access") === undefined || window.localStorage.getItem("access") === "undefined" || window.localStorage.getItem("access") === null);
+       // return !(window.localStorage.getItem("access") === undefined || window.localStorage.getItem("access") === "undefined" || window.localStorage.getItem("access") === null);
+       return true;
     },
     isLocal: function(name){
       return !(window.localStorage.getItem(name) === undefined || window.localStorage.getItem(name) === "undefined" || window.localStorage.getItem(name) === null);
@@ -140,7 +141,7 @@ var app = {
     //getData Signal
     getDataSignals:  function(){
       var myData={
-        userCode: this.registrationId,
+        userCode: 'mytest',// this.registrationId,
       };
       $.ajax({
                 type: "POST",
