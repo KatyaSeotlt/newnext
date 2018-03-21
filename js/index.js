@@ -191,6 +191,8 @@ var app = {
                       + '<div class="tiker"><div class="normalTextBigEMitent">'+jsonData.signals[i].name+'</div></div>'
                       + '<div class="price"><div class="litetext">Рекомендованная цена</div></div>'
                       + '<div class="tiker"><div class="normalTextBig">'+jsonData.signals[i].price+'</div></div>'
+                      + '<div class="price"><div class="litetext">Тип сигнала</div></div>'
+                      + '<div class="tiker"><div class="normalTextBig">'+jsonData.signals[i].type_signal+'</div></div>'
                       + '<div class="detail price"><div class="litetext">Поделиться</div></div>'
                       + '<div class="detail tiker">'
                       +'<div class="shareicons"><a href="'+url+'" target="_system" data-rel="external"><img src="img/vk.png" class="shareicon"/></a></div>'
